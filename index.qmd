@@ -1,9 +1,9 @@
 ---
 pagetitle: "metaextractoR: An R Package for Streamlined Data Extraction in Systematic Reviews and Meta-Analyses"
 author: "Danyang Dai"
-date: "4th of Decemeber"
-host: "ASC 2025"
-institute: "The University of Queensland"
+date: "29th of July"
+host: "YSM 2026"
+institute: "King's College London & The University of Queensland"
 strip-comments: true
 format: 
   revealjs:
@@ -27,7 +27,7 @@ filters:
    - roughnotation
 ---
 
-##  {#title-slide background="images/bg_titlepage.png"background-size="100%"}
+##  {#title-slide background="images/bg_titlepage.png" background-size="100%"}
 
 ```{r setup, include = FALSE}
 #library(tidyverse)
@@ -84,37 +84,11 @@ detach_package <- function(pkg, character.only = FALSE)
 :::
 
 ::: notes
+Hello everybody. Thank you for coming today.I am Daidai and I am a third year PhD student from the University of Queensland. I’m in the final stages of my PhD, graduating mid-next year, and I’m starting to look ahead to my next chapter.
 
-Hello everybody. Thank you for coming today.I am Daidai and I am a third year PhD student from the University of Queensland. I’m in the final stages of my PhD, graduating mid-next year, and I’m starting to look ahead to my next chapter. 
-
-Today, I will be showcasing my very first R package that utilise Large Language Models to extract data for systematic review and meta-analysis. 
-
+Today, I will be showcasing my very first R package that utilise Large Language Models to extract data for systematic review and meta-analysis.
 :::
 
-## [Acknowledgement of Country]{auto-animate="true"}
-
-::::: columns
-::: {.column width="50%"}
-<br><br>
-
-<p style="text-align: center;">
-
-I acknowledge the Traditional Owners and their custodianship of the lands on which we meet.\
-We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country.
-
-</p>
-:::
-
-::: {.column width="50%"}
-![](images/ack_cou.jpg){fig-align="center"}
-:::
-:::::
-
-::: notes
-
-Before I start my presentation, I would like to acknowledge the Traditional Owners and their custodianship of the lands on which we meet. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country.
-:::
- 
 
 ## [What is Systematic Reivew?]{auto-animate="true"}
 
@@ -122,10 +96,9 @@ Before I start my presentation, I would like to acknowledge the Traditional Owne
 
 -   Systematic reviews and meta-analyses are pillars of evidence-based medicine.
 
-- ![](images/SR_steps.png){fig-align="center"}
+-   ![](images/SR_steps.png){fig-align="center"}
 
 ::: notes
-
 Systematic review and meta-analysis might not be a familiar term for many of you. They are widely regarded as the "gold standard" for generating high-quality evidence to inform clinical practice and policy decisions.
 
 The steps includes topic selection, conceptualised and create protocol, searching for studies,screening for studies,appraise studies, data extraction, synthesis and interpret results.
@@ -140,16 +113,13 @@ This might still be quite abstract to you, so let me show you an example.
 </iframe>
 
 ::: notes
-
-
 In this systematic review and meta-analysis, we set out to understand the true prevalence of COVID-associated acute kidney injury. Yes—you heard that right. Acute kidney injury, or AKI, is actually one of the more common complications seen in hospitalised COVID patients. It refers to a sudden loss of kidney function, typically detected through changes in serum creatinine.
 
 What sparked this project was a simple question: why do published AKI prevalence vary so dramatically? When I looked into the literature, I found reported prevalence ranging anywhere from 1% to 70%. So, we undertook this systematic review and meta-analysis to bring clarity to the global picture—examining where and why COVID-associated AKI rates differ, and uncovering geographic and socioeconomic patterns that may explain these disparities.
 
-In this systematic review and meta-analysis, we observed a clear pattern: COVID-associated AKI higher in high-income countries, and substantially lower in low- and lower-middle-income countries. For more information, please see the paper. 
+In this systematic review and meta-analysis, we observed a clear pattern: COVID-associated AKI higher in high-income countries, and substantially lower in low- and lower-middle-income countries. For more information, please see the paper.
 
-To arrive at this finding, we extracted data from over 300 published studies using Covidence. And in case you’re not familiar with Covidence, let me show you a quick example of how it works. The most important information we need was the number of patients included in each study, the number of AKI patients, clincial settings on wheather this is an ICU only cohort or not. 
-
+To arrive at this finding, we extracted data from over 300 published studies using Covidence. And in case you’re not familiar with Covidence, let me show you a quick example of how it works. The most important information we need was the number of patients included in each study, the number of AKI patients, clincial settings on wheather this is an ICU only cohort or not.
 :::
 
 ## [Data extraction - Covidence]{auto-animate="true"}
@@ -171,20 +141,19 @@ Because data extraction can be incredibly labour-intensive, we wanted a way to s
 
 The workflow is designed around the Cochrane systematic review guidelines, and importantly, it keeps humans in the loop at every step to make sure the output stays accurate and reliable.
 
-We’ve also created three Shiny apps that give users an easy, intuitive interface, so anyone can extract data with the help of LLMs—without much coding background. 
+We’ve also created three Shiny apps that give users an easy, intuitive interface, so anyone can extract data with the help of LLMs—without much coding background.
 
-The first step is load in the list of abstracts included for your systematic reivew and meta-analysis. 
+The first step is load in the list of abstracts included for your systematic reivew and meta-analysis.
 
-We will use the buidin function in this package to separate the list of abstracts into training and testing set. 
+We will use the buidin function in this package to separate the list of abstracts into training and testing set.
 
-The training set will be used in the first and second apps for prompt engineering and model selection, the testing set will be use for bath processing and validation. 
-
-
+The training set will be used in the first and second apps for prompt engineering and model selection, the testing set will be use for bath processing and validation.
 :::
 
 ## [Demo]{auto-animate="true"}
 
 ![](images/ollama-tool.png){fig-align="center"}
+
 
 ## [Accurate Evaluation]{auto-animate="true"}
 
@@ -348,12 +317,17 @@ Prof. Jason Pole [j.pole\@uq.edu.au](j.pole@uq.edu.au)
 
 <br>
 
-::: {layout="[50,50]"}
-![](images/logos.jpeg){fig-align="center" width="300" height="300"}
 
-![](images/ssa.png){fig-align="center" width="300" height="300"}
-:::
+### Collborate 
 
+<br>
+
+<p style="text-align: center;">
+
+Danyang Dai [danyang.dai\@uq.edu.au](danyang.dai@uq.edu.au)
+
+
+</p>
 ## [Github and Installation]{auto-animate="true"}
 
 `r fa_list(c("fa-solid fa-globe" = "https://danyangdai.github.io/metaextractoR/","fa-solid fa-code-branch" = "Collaborate at: https://github.com/DanyangDai/metaextractoR"))`
@@ -379,4 +353,3 @@ Prof. Jason Pole [j.pole\@uq.edu.au](j.pole@uq.edu.au)
 :::
 :::::
 :::::::::
-

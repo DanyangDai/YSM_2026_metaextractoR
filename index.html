@@ -8,7 +8,9 @@
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
-<script src="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script><meta charset="utf-8">
+<script src="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
+<link href="index_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.css" rel="stylesheet">
+<script src="index_files/libs/quarto-contrib/roughnotation-flourish-bridge-1.0.0/flourish-bridge.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.43">
 
   <meta name="author" content="Danyang Dai">
@@ -137,7 +139,7 @@
 <h2>
 metaextractoR: An R Package for Streamlined Data Extraction in Systematic Reviews and Meta-Analyses
 </h2>
-<p>👩🏻‍💻 <span class="author">Danyang Dai @ The University of Queensland</span></p>
+<p>👩🏻‍💻 <span class="author">Danyang Dai @ King’s College London &amp; The University of Queensland</span></p>
 <div style="overflow: hidden; height: 1.2em;">
 <ul class="content__container__list center" style="text-align: center">
 <li class="content__container__list__item">
@@ -157,41 +159,11 @@ metaextractoR: An R Package for Streamlined Data Extraction in Systematic Review
 </div>
 <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 <div class="absolute top-0 rladies-purple w-100 font-small" style="">
-<p><span class="rladies-purple">4th of Decemeber</span> <span class="rladies-purple">ASC 2025</span></p>
+<p><span class="rladies-purple">29th of July</span> <span class="rladies-purple">YSM 2026</span></p>
 </div>
 <aside class="notes">
 <p>Hello everybody. Thank you for coming today.I am Daidai and I am a third year PhD student from the University of Queensland. I’m in the final stages of my PhD, graduating mid-next year, and I’m starting to look ahead to my next chapter.</p>
 <p>Today, I will be showcasing my very first R package that utilise Large Language Models to extract data for systematic review and meta-analysis.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="acknowledgement-of-country" class="slide level2">
-<h2><span data-auto-animate="true">Acknowledgement of Country</span></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><br><br></p>
-<p style="text-align: center;">
-</p><p>I acknowledge the Traditional Owners and their custodianship of the lands on which we meet.<br>
-We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country.</p>
-<p></p>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/ack_cou.jpg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div></div>
-<aside class="notes">
-<p>Before I start my presentation, I would like to acknowledge the Traditional Owners and their custodianship of the lands on which we meet. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -239,7 +211,7 @@ We pay our respects to their Ancestors and their descendants, who continue cultu
 <p>In this systematic review and meta-analysis, we set out to understand the true prevalence of COVID-associated acute kidney injury. Yes—you heard that right. Acute kidney injury, or AKI, is actually one of the more common complications seen in hospitalised COVID patients. It refers to a sudden loss of kidney function, typically detected through changes in serum creatinine.</p>
 <p>What sparked this project was a simple question: why do published AKI prevalence vary so dramatically? When I looked into the literature, I found reported prevalence ranging anywhere from 1% to 70%. So, we undertook this systematic review and meta-analysis to bring clarity to the global picture—examining where and why COVID-associated AKI rates differ, and uncovering geographic and socioeconomic patterns that may explain these disparities.</p>
 <p>In this systematic review and meta-analysis, we observed a clear pattern: COVID-associated AKI higher in high-income countries, and substantially lower in low- and lower-middle-income countries. For more information, please see the paper.</p>
-<p>To arrive at this finding, we extracted data from over 300 published studies using Covidence. And in case you’re not familiar with Covidence, let me show you a quick example of how it works.</p>
+<p>To arrive at this finding, we extracted data from over 300 published studies using Covidence. And in case you’re not familiar with Covidence, let me show you a quick example of how it works. The most important information we need was the number of patients included in each study, the number of AKI patients, clincial settings on wheather this is an ICU only cohort or not.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -595,27 +567,11 @@ deepseek-r1
 </p><p>Prof.&nbsp;Jason Pole <a href="j.pole@uq.edu.au">j.pole@uq.edu.au</a></p>
 <p></p>
 <p><br></p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[50,50]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/logos.jpeg" class="quarto-figure quarto-figure-center" width="300"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/ssa.png" class="quarto-figure quarto-figure-center" width="300"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
+<h3 id="collborate">Collborate</h3>
+<p><br></p>
+<p style="text-align: center;">
+</p><p>Danyang Dai <a href="danyang.dai@uq.edu.au">danyang.dai@uq.edu.au</a></p>
+<p></p>
 </section>
 <section id="github-and-installation" class="slide level2">
 <h2><span data-auto-animate="true">Github and Installation</span></h2>

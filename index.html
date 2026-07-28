@@ -278,275 +278,142 @@ metaextractoR: An R Package for Streamlined Data Extraction in Systematic Review
 <img data-src="images/ollama-tool.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="accurate-evaluation" class="slide level2">
 <h2><span data-auto-animate="true">Accurate Evaluation</span></h2>
-<table>
-<caption>
-For all LLMs, the model temperature was set to 0.
-</caption>
-<tbody><tr>
-<th>
-Model
-</th>
-<th>
-No.&nbsp;Patients
-</th>
-<th>
-No.&nbsp;AKI
-</th>
-<th>
-ICU Only
-</th>
-<th>
-Mean Age
-</th>
-<th>
-Median Age
-</th>
-<th>
-Start Date
-</th>
-<th>
-End Date
-</th>
+<table class="caption-top" style="width:94%;">
+<caption>For all LLMs, the model temperature was set to 0.</caption>
+<colgroup>
+<col style="width: 11%">
+<col style="width: 14%">
+<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>No.&nbsp;Patients</th>
+<th>No.&nbsp;AKI</th>
+<th>ICU Only</th>
+<th>Mean Age</th>
+<th>Median Age</th>
+<th>Start Date</th>
+<th>End Date</th>
 </tr>
-<tr class="fragment">
-<td>
-llama
-</td>
-<td style="background:#ffeb3b;">
-0.85
-</td>
-<td style="background:#ffeb3b;">
-0.86
-</td>
-<td>
-0.79
-</td>
-<td style="background:#ffeb3b;">
-0.73
-</td>
-<td>
-0.45
-</td>
-<td>
-0.44
-</td>
-<td>
-0.47
-</td>
+</thead>
+<tbody>
+<tr class="odd">
+<td>llama</td>
+<td>0.85</td>
+<td>0.86</td>
+<td>0.79</td>
+<td>0.73</td>
+<td>0.45</td>
+<td>0.44</td>
+<td>0.47</td>
 </tr>
-<tr class="fragment">
-<td>
-gemma
-</td>
-<td>
-0.68
-</td>
-<td>
-0.53
-</td>
-<td style="background:#ffeb3b;">
-0.89
-</td>
-<td style="background:#ffeb3b;">
-0.73
-</td>
-<td style="background:#ffeb3b;">
-0.64
-</td>
-<td>
-0.40
-</td>
-<td>
-0.49
-</td>
+<tr class="even">
+<td>gemma</td>
+<td>0.68</td>
+<td>0.53</td>
+<td>0.89</td>
+<td>0.73</td>
+<td>0.64</td>
+<td>0.40</td>
+<td>0.49</td>
 </tr>
-<tr class="fragment">
-<td>
-medllama
-</td>
-<td>
-0.66
-</td>
-<td>
-0.51
-</td>
-<td>
-0.32
-</td>
-<td style="background:#ffeb3b;">
-0.73
-</td>
-<td>
-NA
-</td>
-<td style="background:#ffeb3b;">
-0.51
-</td>
-<td>
-0.49
-</td>
+<tr class="odd">
+<td>medllama</td>
+<td>0.66</td>
+<td>0.51</td>
+<td>0.32</td>
+<td>0.73</td>
+<td>NA</td>
+<td>0.51</td>
+<td>0.49</td>
 </tr>
-<tr class="fragment">
-<td>
-mistral
-</td>
-<td>
-0.76
-</td>
-<td>
-0.49
-</td>
-<td>
-0.53
-</td>
-<td style="background:#ffeb3b;">
-0.73
-</td>
-<td style="background:#ffeb3b;">
-0.64
-</td>
-<td>
-0.42
-</td>
-<td>
-0.51
-</td>
+<tr class="even">
+<td>mistral</td>
+<td>0.76</td>
+<td>0.49</td>
+<td>0.53</td>
+<td>0.73</td>
+<td>0.64</td>
+<td>0.42</td>
+<td>0.51</td>
 </tr>
-<tr class="fragment">
-<td>
-nuextract
-</td>
-<td style="background:#ffeb3b;">
-0.85
-</td>
-<td>
-0.30
-</td>
-<td>
-0.47
-</td>
-<td>
-0.64
-</td>
-<td>
-0.45
-</td>
-<td>
-0.28
-</td>
-<td>
-0.35
-</td>
+<tr class="odd">
+<td>nuextract</td>
+<td>0.85</td>
+<td>0.30</td>
+<td>0.47</td>
+<td>0.64</td>
+<td>0.45</td>
+<td>0.28</td>
+<td>0.35</td>
 </tr>
-<tr class="fragment">
-<td>
-deepseek
-</td>
-<td>
-0.42
-</td>
-<td>
-0.51
-</td>
-<td>
-0.37
-</td>
-<td style="background:#ffeb3b;">
-0.73
-</td>
-<td>
-0.55
-</td>
-<td style="background:#ffeb3b;">
-0.51
-</td>
-<td style="background:#ffeb3b;">
-0.53
-</td>
+<tr class="even">
+<td>deepseek</td>
+<td>0.42</td>
+<td>0.51</td>
+<td>0.37</td>
+<td>0.73</td>
+<td>0.55</td>
+<td>0.51</td>
+<td>0.53</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 </section>
 <section id="total-accuracy-of-the-llms-and-run-time" class="slide level2">
 <h2><span data-auto-animate="true">Total Accuracy of the LLMs and Run Time</span></h2>
-<table>
-<tbody><tr>
-<th>
-Model
-</th>
-<th>
-Accuracy
-</th>
-<th>
-Run time
-</th>
+<table class="caption-top" style="width:53%;">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 15%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Accuracy</th>
+<th>Run time</th>
 </tr>
-<tr class="fragment">
-<td>
-llama3.1
-</td>
-<td style="background:#ffeb3b;">
-0.693
-</td>
-<td>
-9.21 mins
-</td>
+</thead>
+<tbody>
+<tr class="odd">
+<td>llama3.1</td>
+<td>0.693</td>
+<td>9.21 mins</td>
 </tr>
-<tr class="fragment">
-<td>
-gemma3
-</td>
-<td>
-0.594
-</td>
-<td>
-9.02 mins
-</td>
+<tr class="even">
+<td>gemma3</td>
+<td>0.594</td>
+<td>9.02 mins</td>
 </tr>
-<tr class="fragment">
-<td>
-medllama2
-</td>
-<td>
-0.533
-</td>
-<td>
-9.61 mins
-</td>
+<tr class="odd">
+<td>medllama2</td>
+<td>0.533</td>
+<td>9.61 mins</td>
 </tr>
-<tr class="fragment">
-<td>
-mistral
-</td>
-<td>
-0.594
-</td>
-<td>
-11.55 mins
-</td>
+<tr class="even">
+<td>mistral</td>
+<td>0.594</td>
+<td>11.55 mins</td>
 </tr>
-<tr class="fragment">
-<td>
-nuextract
-</td>
-<td>
-0.529
-</td>
-<td style="background:#ffeb3b;">
-6.91 mins
-</td>
+<tr class="odd">
+<td>nuextract</td>
+<td>0.529</td>
+<td>6.91 mins</td>
 </tr>
-<tr class="fragment">
-<td>
-deepseek-r1
-</td>
-<td>
-0.483
-</td>
-<td>
-11.48 mins
-</td>
+<tr class="even">
+<td>deepseek-r1</td>
+<td>0.483</td>
+<td>11.48 mins</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 </section>
 <section id="furture-work" class="slide level2">
 <h2><span data-auto-animate="true">Furture work</span></h2>

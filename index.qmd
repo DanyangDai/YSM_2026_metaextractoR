@@ -89,7 +89,6 @@ Hello everybody. Thank you for coming today.I am Daidai and I am a third year Ph
 Today, I will be showcasing my very first R package that utilise Large Language Models to extract data for systematic review and meta-analysis.
 :::
 
-
 ## [What is Systematic Reivew?]{auto-animate="true"}
 
 -   A structured, comprehensive method for identifying and summarising all available evidence on a specific research question.
@@ -154,140 +153,43 @@ The training set will be used in the first and second apps for prompt engineerin
 
 ![](images/ollama-tool.png){fig-align="center"}
 
-
 ## [Accurate Evaluation]{auto-animate="true"}
 
++-----------+--------------+---------+----------+----------+------------+------------+----------+
+| Model     | No. Patients | No. AKI | ICU Only | Mean Age | Median Age | Start Date | End Date |
++===========+==============+=========+==========+==========+============+============+==========+
+| llama     | 0.85         | 0.86    | 0.79     | 0.73     | 0.45       | 0.44       | 0.47     |
++-----------+--------------+---------+----------+----------+------------+------------+----------+
+| gemma     | 0.68         | 0.53    | 0.89     | 0.73     | 0.64       | 0.40       | 0.49     |
++-----------+--------------+---------+----------+----------+------------+------------+----------+
+| medllama  | 0.66         | 0.51    | 0.32     | 0.73     | NA         | 0.51       | 0.49     |
++-----------+--------------+---------+----------+----------+------------+------------+----------+
+| mistral   | 0.76         | 0.49    | 0.53     | 0.73     | 0.64       | 0.42       | 0.51     |
++-----------+--------------+---------+----------+----------+------------+------------+----------+
+| nuextract | 0.85         | 0.30    | 0.47     | 0.64     | 0.45       | 0.28       | 0.35     |
++-----------+--------------+---------+----------+----------+------------+------------+----------+
+| deepseek  | 0.42         | 0.51    | 0.37     | 0.73     | 0.55       | 0.51       | 0.53     |
++-----------+--------------+---------+----------+----------+------------+------------+----------+
 
-<table>
-  <caption> For all LLMs, the model temperature was set to 0.</caption>
-  <tr>
-    <th>Model</th>
-    <th>No. Patients</th>
-    <th>No. AKI</th>
-    <th>ICU Only</th>
-    <th>Mean Age</th>
-    <th>Median Age</th>
-    <th>Start Date</th>
-    <th>End Date</th>
-  </tr>
-
-  <tr class="fragment">
-    <td>llama</td>
-    <td style="background:#ffeb3b;">0.85</td>
-    <td style="background:#ffeb3b;">0.86</td>
-    <td>0.79</td>
-    <td style="background:#ffeb3b;">0.73</td>
-    <td>0.45</td>
-    <td>0.44</td>
-    <td>0.47</td>
-  </tr>
-
-  <tr class="fragment">
-    <td>gemma</td>
-    <td>0.68</td>
-    <td>0.53</td>
-    <td style="background:#ffeb3b;">0.89</td>
-    <td style="background:#ffeb3b;">0.73</td>
-    <td style="background:#ffeb3b;">0.64</td>
-    <td>0.40</td>
-    <td>0.49</td>
-  </tr>
-
-  <tr class="fragment">
-    <td>medllama</td>
-    <td>0.66</td>
-    <td>0.51</td>
-    <td>0.32</td>
-    <td style="background:#ffeb3b;">0.73</td>
-    <td>NA</td>
-    <td style="background:#ffeb3b;">0.51</td>
-    <td>0.49</td>
-  </tr>
-
-  <tr class="fragment">
-    <td>mistral</td>
-    <td>0.76</td>
-    <td>0.49</td>
-    <td>0.53</td>
-    <td style="background:#ffeb3b;">0.73</td>
-    <td style="background:#ffeb3b;">0.64</td>
-    <td>0.42</td>
-    <td>0.51</td>
-  </tr>
-
-  <tr class="fragment">
-    <td>nuextract</td>
-    <td style="background:#ffeb3b;">0.85</td>
-    <td>0.30</td>
-    <td>0.47</td>
-    <td>0.64</td>
-    <td>0.45</td>
-    <td>0.28</td>
-    <td>0.35</td>
-  </tr>
-
-  <tr class="fragment">
-    <td>deepseek</td>
-    <td>0.42</td>
-    <td>0.51</td>
-    <td>0.37</td>
-    <td style="background:#ffeb3b;">0.73</td>
-    <td>0.55</td>
-    <td style="background:#ffeb3b;">0.51</td>
-    <td style="background:#ffeb3b;">0.53</td>
-  </tr>
-</table>
-
-
-
+: For all LLMs, the model temperature was set to 0.
 
 ## [Total Accuracy of the LLMs and Run Time]{auto-animate="true"}
 
-<table>
-  <tr>
-    <th>Model</th>
-    <th>Accuracy</th>
-    <th>Run time</th>
-  </tr>
-  
-  <tr class="fragment">
-    <td>llama3.1</td>
-    <td style="background:#ffeb3b;">0.693</td>
-    <td>9.21 mins</td>
-  </tr>
-  
-  <tr class="fragment">
-    <td>gemma3</td>
-    <td>0.594</td>
-    <td>9.02 mins</td>
-  </tr>
-  
-  <tr class="fragment">
-    <td>medllama2</td>
-    <td>0.533</td>
-    <td>9.61 mins</td>
-  </tr>
-  
-  <tr class="fragment">
-    <td>mistral</td>
-    <td>0.594</td>
-    <td>11.55 mins</td>
-  </tr>
-  
-  <tr class="fragment">
-    <td>nuextract</td>
-    <td>0.529</td>
-    <td style="background:#ffeb3b;">6.91 mins</td>
-  </tr>
-  
-  <tr class="fragment">
-    <td>deepseek-r1</td>
-    <td>0.483</td>
-    <td>11.48 mins</td>
-  </tr>
-  
-</table>
-
++-------------+----------+------------+
+| Model       | Accuracy | Run time   |
++=============+==========+============+
+| llama3.1    | 0.693    | 9.21 mins  |
++-------------+----------+------------+
+| gemma3      | 0.594    | 9.02 mins  |
++-------------+----------+------------+
+| medllama2   | 0.533    | 9.61 mins  |
++-------------+----------+------------+
+| mistral     | 0.594    | 11.55 mins |
++-------------+----------+------------+
+| nuextract   | 0.529    | 6.91 mins  |
++-------------+----------+------------+
+| deepseek-r1 | 0.483    | 11.48 mins |
++-------------+----------+------------+
 
 ## [Furture work]{auto-animate="true"}
 
@@ -317,8 +219,7 @@ Prof. Jason Pole [j.pole\@uq.edu.au](j.pole@uq.edu.au)
 
 <br>
 
-
-### Collborate 
+### Collborate
 
 <br>
 
@@ -326,8 +227,8 @@ Prof. Jason Pole [j.pole\@uq.edu.au](j.pole@uq.edu.au)
 
 Danyang Dai [danyang.dai\@uq.edu.au](danyang.dai@uq.edu.au)
 
-
 </p>
+
 ## [Github and Installation]{auto-animate="true"}
 
 `r fa_list(c("fa-solid fa-globe" = "https://danyangdai.github.io/metaextractoR/","fa-solid fa-code-branch" = "Collaborate at: https://github.com/DanyangDai/metaextractoR"))`
